@@ -7,7 +7,11 @@
 <script>
 import NavBar from './components/NavBar.vue'
 export default {
-  components: { NavBar }
+  components: { NavBar },
+  // created () {
+  //   this.$http.post('usuarios.json', { Nome: 'Mario', Cidade: 'São Carlos' })
+  //     .then(resp => console.log(resp))
+  // }
 }
 </script>
 
