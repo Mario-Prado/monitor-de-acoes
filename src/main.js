@@ -6,6 +6,8 @@ import './axios/axios'
 
 Vue.config.productionTip = false
 
+Vue.filter('dinheiro', valor => `R$ ${parseFloat(valor).toFixed(2)}`.replace('.', ','))
+
 new Vue({
   router,
   store,

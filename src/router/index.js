@@ -1,17 +1,28 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import TelaInicial from '../views/TelaInicial.vue'
+import TelaAcoesDisponiveis from '../views/TelaAcoesDisponiveis.vue'
+import TelaPortifolio from '../views/TelaPortifolio.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
+  {
+    path: '/',
+    name: 'inicio',
+    component: TelaInicial
+    // component: () => import(/* webpackChunkName: "inicio" */ './views/TelaAcoesDisponiveis.vue')
+  },
+  {
+    path: '/acoes',
+    name: 'TelaAcoesDisponiveis',
+    component: TelaAcoesDisponiveis
+  },
+  {
+    path: '/portifolio',
+    name: 'TelaPortifolio',
+    component: TelaPortifolio
+  }
 ]
 
 const router = new VueRouter({
